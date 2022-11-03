@@ -3,6 +3,4 @@ pandas
 streamlit
 torchvision
 numpy
-os
-urllib
 PIL
