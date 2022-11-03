@@ -1,8 +1,7 @@
 altair
 pandas
 streamlit
-torchvision.io
-torchvision.models
+torchvision
 numpy
 os
 urllib
