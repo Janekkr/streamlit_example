@@ -1,0 +1,9 @@
+altair
+pandas
+streamlit
+torchvision.io
+torchvision.models
+numpy
+os
+urllib
+PIL
