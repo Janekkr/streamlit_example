@@ -3,4 +3,4 @@ pandas
 streamlit
 torchvision
 numpy
-PIL
+pillow
