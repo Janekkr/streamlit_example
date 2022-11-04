@@ -3,7 +3,7 @@ import altair as alt
 import pandas as pd
 import numpy as np
 import os
-import front.is_cat as is_cat 
+import is_cat 
 from PIL import Image
 @st.cache
 def load_image(img_file):
