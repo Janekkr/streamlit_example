@@ -1,14 +1,10 @@
 from zenml.steps import step
 from torch.utils.data import Dataset
-import pandas as pd
-from PIL import Image
 import os
-from image_formatting import crop_and_scale
-import os
-from os import listdir
-from os.path import isfile, join
 import pandas as pd
 import pathlib
+from torchvision import transforms
+from CustomImageDataset import CustomImageDataset
 
 
 def get_files_list(directory):
@@ -28,7 +24,7 @@ def save_files_list(directory):
 
 
 @step()
-def create_dataset(): -> Dataset
+def create_dataset() -> Dataset:
     save_files_list("../cats")
     image_dataset = CustomImageDataset(
         annotations_file="../files_list.csv", img_dir="../cats", transform=transforms.ToTensor()

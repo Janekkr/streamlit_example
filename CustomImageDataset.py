@@ -2,8 +2,6 @@ from torch.utils.data import Dataset
 import pandas as pd
 from PIL import Image
 import os
-from image_formatting import crop_and_scale
-from CustomImageDataset import CustomImageDataset
 
 
 class CustomImageDataset(Dataset):

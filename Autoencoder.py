@@ -1,16 +1,7 @@
 import torch
 from torch.autograd import Variable
-import torchvision
-import torch.nn as nn
 import torch.nn.functional as F
-from torchvision import datasets, models, transforms
-import torch.optim as optim
-from torch.optim import lr_scheduler
-import numpy as np
-import os
-import matplotlib.pyplot as plt
 from torch.autograd import Function
-from collections import OrderedDict
 import torch.nn as nn
 import math
 
@@ -131,10 +122,10 @@ encoder = Encoder(Bottleneck, [3, 4, 6, 3])
 encoder.fc = nn.Linear(2048, 48)
 # for param in encoder.parameters():
 #    param.requires_grad = False
-encoder = encoder.cuda()
-y = torch.rand(1, 3, 224, 224)
-x = torch.rand(1, 128)
-x = Variable(x.cuda())
+# encoder = encoder.cuda()
+# y = torch.rand(1, 3, 224, 224)
+# x = torch.rand(1, 128)
+# x = Variable(x.cuda())
 # print decoder(x)
 # y=Variable(y.cuda())
 # print("\n")
@@ -219,7 +210,6 @@ class Decoder(nn.Module):
         return x
 
 
-decoder = Decoder()
 ##########################################
 class Autoencoder(nn.Module):
     def __init__(self):
@@ -245,5 +235,3 @@ class Autoencoder(nn.Module):
 
 
 # print Autoencoder()
-
-autoencoder = Autoencoder()

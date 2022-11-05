@@ -1,17 +1,15 @@
 from zenml.pipelines import pipeline
 
-
-@pipeline()
-def train_model_ppl(load_model, create_dataset, train_model):
+@pipeline(enable_cache=False)
+def train_model_ppl(load_model, train_model):
     a = load_model()
-    b = create_dataset()
-    train_model(a[0], a[1], b)
+    train_model(a)
 
 
 if __name__ == "__main__":
     from steps.load_model import load_model
-    from steps.create_dataset import create_dataset
+
     from steps.train_model import train_model
 
-    pipeline = train_model_ppl(load_model(), create_dataset(), train_model())
+    pipeline = train_model_ppl(load_model(), train_model())
     pipeline.run()
