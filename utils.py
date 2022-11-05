@@ -24,7 +24,7 @@ def get_hundred_links(page):
     return [i['url'] for i in json.loads(response.text)]
 
 
-def get_cat_from_link(link, path='cats/'):
+def get_cat_from_link(link, path='../cats/'):
     cat = requests.get(link)
     with open(f'{path}{link.split("/")[-1]}', 'wb') as cat_file:
         cat_file.write(cat.content)

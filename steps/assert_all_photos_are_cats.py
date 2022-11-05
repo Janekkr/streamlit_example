@@ -5,9 +5,9 @@ import os
 
 
 @step()
-def check_cats(directory: str = None) -> None:
-    if directory is None:
-        directory = 'cats'
+def check_cats() -> None:
+
+    directory = '../cats'
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         image = Image.open(f).convert('RGB')

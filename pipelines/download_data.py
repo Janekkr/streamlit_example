@@ -1,10 +1,15 @@
 from zenml.pipelines import pipeline
 
-@pipeline()
+@pipeline(enable_cache=False)
 def download_and_preproccess_data(download_step, format_step, validate_step):
-    download_step(1)
+    format_step.after(download_step)
+    validate_step.after(format_step)
+    download_step()
     format_step()
     validate_step()
+
+
+
 if __name__=='__main__':
     from steps.download_photos import download_cat_photos
     from steps.assert_all_photos_are_cats import check_cats
