@@ -1,6 +1,9 @@
-altair
-pandas
-streamlit
-torchvision
-numpy
-pillow
+altair~=4.2.0
+pandas~=1.5.1
+streamlit~=1.14.0
+torchvision~=0.14.0
+numpy~=1.23.4
+pillow~=9.3.0
+torch~=1.13.0
+requests~=2.28.1
+zenml~=0.21.1

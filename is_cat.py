@@ -2,6 +2,7 @@
 from torchvision.io import read_image
 from torchvision.models import resnet50, ResNet50_Weights
 import pandas as pd
+from PIL import Image
 # Step 1: Initialize model with the best available weights
 weights = ResNet50_Weights.DEFAULT
 model = resnet50(weights=weights)
