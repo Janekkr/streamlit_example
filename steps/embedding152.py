@@ -1,7 +1,7 @@
 from zenml.steps import step
 from PIL import Image
 import torchvision.models
-from eval import eval
+from utils import eval
 
 resnet152_weights = torchvision.models.ResNet152_Weights.DEFAULT
 resnet152_model = torchvision.models.resnet152(weights=resnet152_weights)

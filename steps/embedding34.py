@@ -1,7 +1,7 @@
 from zenml.steps import step
 from PIL import Image
 import torchvision.models
-from eval import eval
+from utils import eval
 
 resnet34_weights = torchvision.models.ResNet34_Weights.DEFAULT
 resnet34_model = torchvision.models.resnet34(weights=resnet34_weights)

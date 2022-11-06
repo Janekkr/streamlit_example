@@ -18,7 +18,6 @@ def embeddings_pipeline(
     merge_embeddings(filenames, embedding18, embedding34, embedding50, embedding101, embedding152)
 
 if __name__ == "__main__":
-    from embeddings_pipeline import embeddings_pipeline
     from steps.embedding18 import save_resnet18_embeddings
     from steps.embedding34 import save_resnet34_embeddings
     from steps.embedding152 import save_resnet152_embeddings

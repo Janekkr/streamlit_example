@@ -3,7 +3,7 @@ import os
 
 @step(enable_cache=False)
 def save_names() -> list:
-    directory="cats/"
+    directory="../cats/"
     img_name_list = []
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
